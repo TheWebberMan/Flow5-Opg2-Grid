@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        box-sizing: border-box;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: white;
+    position: relative;
+    border: 2px solid grey;
+}
+
+.container {
+    background-color: #ddd;
+    
+    padding: 15px 10px;
+    display: grid;
+    grid-template-areas: 'nav nav' 
+    'banner1 banner1'
+    'banner2 banner3'
+    'banner4 banner5' 
+    'banner6 banner7'
+    'footer footer';
+    gap: 15px;
+    
+}
+
+p {
+    padding: 5px;
+}
+
+.logo, .navi {
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 3px;
+}
+
+.logo {
+    height: 30px;
+    width:40px;
+    border: 2px solid grey;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.navi {
+    height: 30px;
+    width:40px;
+    border: 2px solid grey;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.footer {
+height: 50px;
+width: 100%;
+background-color: white;
+border: 2px solid grey;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.footer, .banner1, .banner2, .banner3, .banner4, .banner5, .banner6, .banner7 {
+border: 2px solid grey;
+background-color: white;
+}
+
+img {
+    width: 100%;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.banner1 {
+    grid-area: banner1;
+}
+
+.banner2 {
+    grid-area: banner2;
+}
+
+.banner3 {
+    grid-area: banner3;
+}
+
+.banner4 {
+    grid-area: banner4;
+}
+
+.banner5 {
+    grid-area: banner5;
+}
+
+.banner6 {
+    grid-area: banner6;
+}
+
+.banner7 {
+    grid-area: banner7;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+@media screen and (min-width: 785px) {
+    .container {
+        background-color: #ddd;
+        padding: 15px 10px;
+        display: grid;
+        grid-template-areas: 'nav nav nav' 
+        'banner1 banner1 banner1'
+        'banner2 banner3 banner4'
+        'banner5 banner6 banner7' 
+        'footer footer footer';
+        gap: 15px;
+        
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .container {
+        background-color: #ddd;
+        padding: 15px 10px;
+        display: grid;
+        grid-template-areas: 'nav nav nav' 
+        'banner1 banner1 .'
+        'banner1 banner1 banner2'
+        'banner3 banner4 banner4' 
+        ' . banner4 banner4' 
+        'banner5 banner6 banner7' 
+        'footer footer footer';
+        gap: 80px 15px;
+        
+    }
+    .navi {
+    width: 600px;
+    }
+}
